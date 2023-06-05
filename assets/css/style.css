@@ -1,4 +1,5 @@
 #app{
+  position: relative;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
@@ -10,16 +11,16 @@
   padding: 0px 12px;
   display: grid;
   grid-template-rows: 5rem;
-  /* grid-auto-rows: max-content; */
   position: relative;
 }
 
 .header{
+  position: sticky;
   display: grid;
   grid-template-columns: repeat(2, max-content);
   justify-content: space-between;
-  /* border-bottom: white 1px solid; */
   align-items: center;
+  z-index: 30;
 }
 
 .header-btn{
@@ -31,6 +32,21 @@
   border: solid 1px currentColor;
 }
 
+.navMobile{
+  position: fixed;
+  background-color: #181719;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  transform: translateX(100%);
+  z-index: 20;
+  transition: transform .3s ease-in-out;
+}
+
 .navbar{
   display: none;
 }
@@ -40,19 +56,24 @@
   align-items: center;
 }
 
-.navbar-item{
+.navbar-item,
+.navMobile-item{
+  width: 8rem;
   padding: 1rem;
-  text-align: center;
 }
 
-.navbar-link{
+.navbar-link,
+.navMobile-link{
+  margin-inline: auto;
   width: max-content;
   padding: .4rem 0;
   border-bottom: solid 2px transparent;
 }
 
-.navbar-link:hover{
+.navbar-link:hover,
+.navMobile-link:hover{
   border-bottom: solid 2px currentColor;
+  font-weight: 900;
 }
 
 .btbMobile{
@@ -115,9 +136,7 @@
   width: 60px;
   border-radius: 50%;
 }
-.card-data{
 
-}
 .card-title{
   font-family: Montserrat;
   font-size: 14px;
@@ -161,7 +180,11 @@
 }
 
 .appearBar{
-  transform: translateX(100%);
+  transform: translateX(0%);
+}
+
+.active{
+  border-bottom: solid 2px currentColor;
 }
 
 
@@ -180,8 +203,8 @@
     display: grid;
   }
 
-  .header{
-    grid-template-columns: repeat(2, max-content);
+  .navMobile{
+    display: none;
   }
   .header-nav{
     display: flex;
@@ -193,16 +216,16 @@
     display: none;
   }
   .navbar{
-    /* display: grid; */
+    display: grid;;
+  }
+  .navbar-list{
+    gap: min(1vw, 2rem);
   }
 
   #app{
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
-  }
-  
-  .sectionMAin{
-    /* grid-column: 1/2; */
+    margin-top: 5rem;
   }
 
   .section-img{
@@ -227,6 +250,10 @@
 }
 
 @media screen and (min-width: 1100px){
+  .header{
+    font-size: 1.2rem;
+  }
+
   .sectionMain-title{
     width: max-content;
     font-size: 48px;
@@ -248,20 +275,15 @@
     display: grid;
   }
 
-  .header{
-    grid-template-columns: repeat(2, max-content);
-  }
   .header-nav{
     display: flex;
     flex-flow: row nowrap;
     background-color: rgb(0, 0, 0);
     transition: transform .3s linear;
   }
+
   .btbMobile{
     display: none;
-  }
-  .navbar{
-    /* display: grid; */
   }
 
   #app{
