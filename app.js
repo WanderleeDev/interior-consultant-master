@@ -11,13 +11,25 @@ addBlock('#app', Main());
 //footer agregado
 addBlock('#app', Footer(),'afterend');
 
-const btnMobile = document.querySelector('.btbMobile');
+const btnMobile = document.querySelectorAll('.btbMobile');
+console.log(btnMobile);
 
-btnMobile.addEventListener('click', () => {
-  const elementTarget = document.querySelector('.navMobile');
-  console.log(elementTarget);
-  elementTarget.classList.toggle('appearBar');
-})
+//Desplegar barra de navegación mobile
+btnMobile.forEach(btn => {
+
+  btn.addEventListener( 'click' ,() => {
+    const btnOpen= document.querySelector('#btn-open');
+    const btnClose= document.querySelector('#btn-close');
+
+    // Alternar los valores de los atributos "id"
+    const tempId = btnOpen.id;
+    btnOpen.id = btnClose.id;
+    btnClose.id = tempId;
+
+    const elementTarget = document.querySelector('.navMobile');
+    elementTarget.classList.toggle('appearBar');
+  });
+});
 
 //element = elementos HTML 
 //HTML = cadenas de texto a formato html
