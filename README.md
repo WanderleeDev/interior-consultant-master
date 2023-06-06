@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">The creative crew</h1>
+<h1 align="center">Interior consultant master</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://my-team-page-alpha.vercel.app/">
+    <a href="https://interior-consultant-master-nine.vercel.app/">
       Demo
     </a>
     <span> | </span>
@@ -16,7 +16,7 @@
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U">
+    <a href="https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb">
       Challenge
     </a>
   </h3>
@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](./assets/img/web.png)
+![screenshot](assets/img/web.png)
 
 ### Built With
 
@@ -62,6 +62,6 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## Contact
 
-- Website [your-website.com](https://my-team-page-alpha.vercel.app/)
+- Website [your-website.com](https://interior-consultant-master-nine.vercel.app/)
 - GitHub [WanderleeDev](https://github.com/WanderleeDev)
 - LinkeDin [Wanderlee Max Gutierrez Gamboa](https://www.linkedin.com/in/wanderlee-max/)
